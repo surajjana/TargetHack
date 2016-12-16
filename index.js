@@ -117,7 +117,7 @@ function eventHandle(sender, event){
 					              "title": "Get Details"
 					            }
 					          ],
-					          "image_url": "https://media1.popsugar-assets.com/files/thumbor/EoxEA5ROSQ_2zfNxHtnHdn2VQJg/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/06/16/720/n/1922564/d07988d3_edit_img_image_41677440_1466092624_B0648_BK5229_m/i/Leather-Jacket-Details.jpg",
+					          "image_url": "http://papini.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/g/r/greynavy_hoodie.jpg",
 					          "subtitle": "Description Of the product",
 					          "title": "Hoodie 1"
 					        }
