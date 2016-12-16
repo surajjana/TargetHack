@@ -102,7 +102,17 @@ function eventHandle(sender, event){
 			}else if (event.message && event.message.text) {
 				var text = event.message.text
 
-				if(text.toLowerCase() == 'suggest me some hoodies'){
+				var a = text.split(' ')
+
+				if(a[a.length - 3] == 'at'){
+					var msgData = { text: "Will remind you "+res[0].first_name+" :-)"}
+					var sent_msg = text
+					var received_msg = msgData.text
+					var msg_cat = 'to-do'
+					var time_stamp = Date.now()
+
+					sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
+				}else if(text.toLowerCase() == 'suggest me some hoodies'){
 					var msgData = {
 					  "attachment": {
 					    "type": "template",
