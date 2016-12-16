@@ -261,21 +261,13 @@ function eventHandle(sender, event){
 				if(event.message.attachments[0].type == 'image'){
 					
 					var msgData = {
-					  "attachment": {
-					    "type": "template",
-					    "payload": {
-					      "template_type": "generic",
-					      "elements": [
-					        {
-					          "buttons": [],
-					          "image_url": event.message.attachments[0].payload.url,
-					          "subtitle": "Details about it",
-					          "title": "You Image"
-					        }
-					      ]
-					    }
-					  }
-					}
+						"attachment":{
+      						"type":"image",
+      						"payload":{
+        						"url": event.message.attachments[0].payload.url
+      						}
+    					}
+    				}
 					var sent_msg = 'image'
 					var received_msg = 'Image Details'
 					var msg_cat = 'image'
