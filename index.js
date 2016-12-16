@@ -117,7 +117,7 @@ function eventHandle(sender, event){
 					              "title": "Get Details"
 					            }
 					          ],
-					          "image_url": "http://careersensy.com/img/logo.png",
+					          "image_url": "https://peterssendreceiveapp.ngrok.io/img/gray-t-shirt.png",
 					          "subtitle": "Job Mini Description",
 					          "title": "Job Title"
 					        }
