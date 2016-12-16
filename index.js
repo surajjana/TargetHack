@@ -260,7 +260,7 @@ function eventHandle(sender, event){
 			}else if(event.message && event.message.attachments){
 				if(event.message.attachments[0].type == 'image'){
 
-					request("http://52.34.226.223:8008/detect/"+qs.escape(text.replace(/\//g, " ")), function(error, response, body) {
+					request("http://52.34.226.223:8008/detect/"+qs.escape(event.message.attachments[0].payload.url.replace(/\//g, " ")), function(error, response, body) {
 						console.log(body)
 						var msgData = {
 							"attachment":{
