@@ -112,7 +112,8 @@ function eventHandle(sender, event){
 					var time_stamp = Date.now()
 
 					sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
-				}else if(text.toLowerCase == 'my to-do'){
+				}else if(text.toLowerCase == 'my calendar'){
+					console.log('My Calendar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 					var cursor = db.collection('fb_msg_log').find({ "fb_id": parseInt(sender), "msg_cat": "to-do" }).toArray(function(err, res){
 						console.log(res)
 					})
