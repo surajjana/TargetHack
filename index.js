@@ -115,7 +115,20 @@ function eventHandle(sender, event){
 				}else if(text.toLowerCase() == 'my calendar'){
 					console.log('My Calendar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 					var cursor = db.collection('fb_msg_log').find({ "fb_id": parseInt(sender), "msg_cat": "to-do" }).toArray(function(err, res){
-						console.log(res)
+
+						var res_str = ''
+
+					  	for(var i=0; i<res.length; i++ ){
+					  		res_str +=	res[i].sent_msg+'\n'
+					  	}
+
+					  	var msgData = { text: res_str}
+					  	var sent_msg = text
+						var received_msg = 'to-do list'
+						var msg_cat = 'to-do list'
+						var time_stamp = Date.now()
+
+						sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
 					})
 				}else if(text.toLowerCase() == 'suggest me some hoodies'){
 					var msgData = {
