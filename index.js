@@ -153,6 +153,57 @@ function eventHandle(sender, event){
 					var time_stamp = Date.now()
 
 					sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
+				}else if(text.toLowerCase() == 'i need groceries'){
+					var msgData = {
+					  "attachment": {
+					    "type": "template",
+					    "payload": {
+					      "template_type": "generic",
+					      "elements": [
+					        {
+					          "buttons": [
+					            {
+					              "payload": "ITEM",
+					              "type": "postback",
+					              "title": "Get Details"
+					            },
+					            {
+					              "payload": "ATC",
+					              "type": "postback",
+					              "title": "Add to cart"
+					            }
+					          ],
+					          "image_url": "http://www.bigbasket.com/media/uploads/p/s/279836_6-24-mantra-organic-rice-sonamasuri-white.jpg",
+					          "subtitle": "Description Of the product",
+					          "title": "Item 1"
+					        },
+					        {
+					          "buttons": [
+					            {
+					              "payload": "ITEM",
+					              "type": "postback",
+					              "title": "Get Details"
+					            },
+					            {
+					              "payload": "ATC",
+					              "type": "postback",
+					              "title": "Add to cart"
+					            }
+					          ],
+					          "image_url": "http://www.bigbasket.com/media/uploads/p/s/40020127_4-fresho-aloo-mutter.jpg",
+					          "subtitle": "Description Of the product",
+					          "title": "Item 2"
+					        }
+					      ]
+					    }
+					  }
+					}
+					var sent_msg = text
+					var received_msg = 'list'
+					var msg_cat = 'groceries'
+					var time_stamp = Date.now()
+
+					sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
 				}else{
 					request("http://52.34.226.223:8008/bot_response/"+qs.escape(text.replace(/\//g, " ")), function(error, response, body) {
 					  var a = JSON.parse(body)
