@@ -261,8 +261,10 @@ function eventHandle(sender, event){
 				if(event.message.attachments[0].type == 'image'){
 
 					request("http://52.34.226.223:8008/detect/"+qs.escape(event.message.attachments[0].payload.url.replace(/\//g, " ")), function(error, response, body) {
-						console.log(body)
-						var msgData = {text: body.imageFaces[0].gender.gender + '\n' + body.imageFaces[0].age.ageRange}
+						
+						var res = JSON.parse(body)
+						console.log(res.imageFaces)
+						var msgData = {text: res.imageFaces[0].gender.gender + '\n' + body.imageFaces[0].age.ageRange}
 						var sent_msg = 'image'
 						var received_msg = 'Image Details'
 						var msg_cat = 'image'
