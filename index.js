@@ -120,6 +120,18 @@ function eventHandle(sender, event){
 					          "image_url": "http://papini.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/g/r/greynavy_hoodie.jpg",
 					          "subtitle": "Description Of the product",
 					          "title": "Hoodie 1"
+					        },
+					        {
+					          "buttons": [
+					            {
+					              "payload": "JACK",
+					              "type": "postback",
+					              "title": "Get Details"
+					            }
+					          ],
+					          "image_url": "http://scene7.zumiez.com/is/image/zumiez/pdp_hero/RipNDip-We-Out-Here-Black-Hoodie-_270780-front.jpg",
+					          "subtitle": "Description Of the product",
+					          "title": "Hoodie 2"
 					        }
 					      ]
 					    }
