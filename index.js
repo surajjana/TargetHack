@@ -263,8 +263,8 @@ function eventHandle(sender, event){
 					request("http://52.34.226.223:8008/detect/"+qs.escape(event.message.attachments[0].payload.url.replace(/\//g, " ")), function(error, response, body) {
 						
 						var res = JSON.parse(body)
-						console.log(res.imageFaces)
-						var msgData = {text: res.imageFaces[0].gender.gender + '\n' + body.imageFaces[0].age.ageRange}
+						console.log(res.imageFaces[0])
+						var msgData = {text: res.imageFaces[0].gender.gender + '\n' + res.imageFaces[0].age.ageRange}
 						var sent_msg = 'image'
 						var received_msg = 'Image Details'
 						var msg_cat = 'image'
