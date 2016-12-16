@@ -101,12 +101,12 @@ function eventHandle(sender, event){
 			}else if (event.message && event.message.text) {
 				var text = event.message.text
 					
-				request("http://52.34.226.223:8008/bot_new_res/"+sender+'/'+qs.escape(text.replace(/\//g, " ")), function(error, response, body) {
+				request("http://52.34.226.223:8008/bot_response/"+qs.escape(text.replace(/\//g, " ")), function(error, response, body) {
 				  var a = JSON.parse(body)
 
 				  var msgData = {}
 
-				  if(a.status == 'ok'){
+				  if(a.status == 'OK'){
 				  	msgData = { text: a.response}
 				  }else{
 				  	msgData = { text: "Something went wrong :-("}
