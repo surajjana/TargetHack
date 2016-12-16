@@ -104,66 +104,26 @@ function eventHandle(sender, event){
 
 				if(text.toLowerCase() == 'suggest me some t-shirts'){
 					var msgData = {
-					    "attachment": {
-					        "type": "template",
-					        "payload": {
-					            "template_type": "list",
-					            "top_element_style": "compact",
-					            "elements": [
-					                {
-					                    "title": "Classic White T-Shirt",
-					                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/white-t-shirt.png",
-					                    "subtitle": "100% Cotton, 200% Comfortable",
-					                    "default_action": {
-					                        "type": "web_url",
-					                        "url": "",
-					                        "messenger_extensions": true,
-					                        "webview_height_ratio": "tall",
-					                        "fallback_url": ""
-					                    },
-					                    "buttons": [
-					                        {
-					                            "title": "Buy",
-					                            "type": "web_url",
-					                            "url": "",
-					                            "messenger_extensions": true,
-					                            "webview_height_ratio": "tall",
-					                            "fallback_url": ""                        
-					                        }
-					                    ]                
-					                },
-					                {
-					                    "title": "Classic White T-Shirt",
-					                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/white-t-shirt.png",
-					                    "subtitle": "100% Cotton, 200% Comfortable",
-					                    "default_action": {
-					                        "type": "web_url",
-					                        "url": "",
-					                        "messenger_extensions": true,
-					                        "webview_height_ratio": "tall",
-					                        "fallback_url": ""
-					                    },
-					                    "buttons": [
-					                        {
-					                            "title": "Buy",
-					                            "type": "web_url",
-					                            "url": "",
-					                            "messenger_extensions": true,
-					                            "webview_height_ratio": "tall",
-					                            "fallback_url": ""                        
-					                        }
-					                    ]                
-					                }
-					            ],
-					             "buttons": [
-					                {
-					                    "title": "View More",
-					                    "type": "postback",
-					                    "payload": "payload"                        
-					                }
-					            ]  
+					  "attachment": {
+					    "type": "template",
+					    "payload": {
+					      "template_type": "generic",
+					      "elements": [
+					        {
+					          "buttons": [
+					            {
+					              "url": "http://careersensy.com",
+					              "type": "web_url",
+					              "title": "Get Details"
+					            }
+					          ],
+					          "image_url": "http://careersensy.com/img/logo.png",
+					          "subtitle": "Job Mini Description",
+					          "title": "Job Title"
 					        }
+					      ]
 					    }
+					  }
 					}
 					var sent_msg = text
 					var received_msg = 'list'
