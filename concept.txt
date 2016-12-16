@@ -17,7 +17,7 @@ A messenger based chat bot
 
 
 Judging Criteria
-----------------
+-----------------
 
 1. Originality 
 2. Applicability to problem statements 

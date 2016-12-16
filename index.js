@@ -259,21 +259,27 @@ function eventHandle(sender, event){
 				var text = event.postback.payload				
 			}else if(event.message && event.message.attachments){
 				if(event.message.attachments[0].type == 'image'){
-					
-					var msgData = {
-						"attachment":{
-      						"type":"image",
-      						"payload":{
-        						"url": event.message.attachments[0].payload.url
-      						}
-    					}
-    				}
-					var sent_msg = 'image'
-					var received_msg = 'Image Details'
-					var msg_cat = 'image'
-					var time_stamp = Date.now()
 
-					sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
+					request("http://52.34.226.223:8008/detect/"+qs.escape(text.replace(/\//g, " ")), function(error, response, body) {
+						console.log(body)
+						var msgData = {
+							"attachment":{
+	      						"type":"image",
+	      						"payload":{
+	        						"url": event.message.attachments[0].payload.url
+	      						}
+	    					}
+	    				}
+						var sent_msg = 'image'
+						var received_msg = 'Image Details'
+						var msg_cat = 'image'
+						var time_stamp = Date.now()
+
+						sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
+
+					})
+					
+					
 				}
 			}
 		})
