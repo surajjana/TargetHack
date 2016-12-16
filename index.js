@@ -101,28 +101,37 @@ function eventHandle(sender, event){
 
 			}else if (event.message && event.message.text) {
 				var text = event.message.text
-					
-				request("http://52.34.226.223:8008/bot_response/"+qs.escape(text.replace(/\//g, " ")), function(error, response, body) {
-				  var a = JSON.parse(body)
 
-				  var msgData = {}
+				if(text.toLowerCase() == 'get me some grocery'){
+					var msgData = { text: 'Let me look for it'}
+					var sent_msg = text
+					var received_msg = msgData.text
+					var msg_cat = 'grocery'
+					var time_stamp = Date.now()
 
-				  if(a.status == 'OK'){
-				  	msgData = { text: a.response}
-				  }else{
-				  	msgData = { text: "Something went wrong :-("}
-				  }
+					sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
+				}else{
+					request("http://52.34.226.223:8008/bot_response/"+qs.escape(text.replace(/\//g, " ")), function(error, response, body) {
+					  var a = JSON.parse(body)
 
-				  var sent_msg = text.replace(/\//g, "").toLowerCase()
-				  var received_msg = msgData.text
-				  var msg_cat = a.msg_cat
-				  var time_stamp = Date.now()
+					  var msgData = {}
 
-				  sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
-				  
-				})
-					
-				
+					  if(a.status == 'OK'){
+					  	msgData = { text: a.response}
+					  }else{
+					  	msgData = { text: "Something went wrong :-("}
+					  }
+
+					  var sent_msg = text.replace(/\//g, "").toLowerCase()
+					  var received_msg = msgData.text
+					  var msg_cat = a.msg_cat
+					  var time_stamp = Date.now()
+
+					  sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
+					  
+					})
+				}
+									
 
 			}else if (event.postback) {
 				var text = event.postback.payload				

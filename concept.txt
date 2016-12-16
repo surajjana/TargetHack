@@ -6,6 +6,14 @@ Problem Statement :
 
 Seamless shopping, sharing/synching to-do lists and personalized style recommendations for young parents with technologies like virtual assistant platform, voice interfaces and image processing to reduce time spent and enable faster, convinient, comfortable shopping from home.
 
+Sollution :
+-----------
+
+A messenger based chat bot
+
+1. Search and buy stuffs using an image search
+2. Just converse with the assistant and details on discounts, nearby places (audio or text)
+
 
 Judging Criteria
 ----------------
