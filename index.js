@@ -104,7 +104,7 @@ function eventHandle(sender, event){
 
 				var a = text.split(' ')
 
-				if(a[a.length - 3] == 'at'){
+				if(a[a.length - 4] == 'at'){
 					var msgData = { text: "Will remind you "+res[0].first_name+" :-)"}
 					var sent_msg = text
 					var received_msg = msgData.text
