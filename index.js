@@ -52,7 +52,7 @@ app.post('/webhook/', function (req, res) {
 })
 
 
-const token = "EAADaZCeOTsPUBAOb6kMcd0n8k6WLZBzgA89rrT9FzTZAb81Bq0rnD1efbCAQDOHg4jXY15QeGZAZCSNUoQbEZBwAn8ov06JgXoIVq9TbkcbUcO871ZABSlMrBNLnq2kEKxU2qBnJ3qzZBiR0qu4MkJ4WBz2KpqyQjlawMKPUReG0LAZDZD"
+const token = "EAAaDbccyVA4BAJtqxozyiVvDKYtz67jTGbHH1ity8pKRwcZB03bXOyEXgpFBama34rNAiaMQK8t6ZA9smGQhKsTtznvZCqbIgWVp4HVQQZCPiZC3Jn4xMr0DqH7ZAFRFG1Yxt43JIsnKE1QDc2sq6W7lAdazwSWuKUWesCzZCCizwZDZD"
 
 function authUser(sender, event){
 	MongoClient.connect(url, function(err, db) {
