@@ -1,0 +1,17 @@
+Concept
+-------
+
+Problem Statement :
+-------------------
+
+Seamless shopping, sharing/synching to-do lists and personalized style recommendations for young parents with technologies like virtual assistant platform, voice interfaces and image processing to reduce time spent and enable faster, convinient, comfortable shopping from home.
+
+
+Judging Criteria
+----------------
+
+1. Originality 
+2. Applicability to problem statements 
+3. Feasibility of development (6 to 8 months)
+4. Capability 
+5. Design flow
