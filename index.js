@@ -257,6 +257,32 @@ function eventHandle(sender, event){
 
 			}else if (event.postback) {
 				var text = event.postback.payload				
+			}else if(event.message && event.message.attachments){
+				if(event.message.attachments[0].type == 'image'){
+					
+					var msgData = {
+					  "attachment": {
+					    "type": "template",
+					    "payload": {
+					      "template_type": "generic",
+					      "elements": [
+					        {
+					          "buttons": [],
+					          "image_url": event.message.attachments[0].payload.url,
+					          "subtitle": "Details about it",
+					          "title": "You Image"
+					        }
+					      ]
+					    }
+					  }
+					}
+					var sent_msg = 'image'
+					var received_msg = 'Image Details'
+					var msg_cat = 'image'
+					var time_stamp = Date.now()
+
+					sendMessage(sender, msgData, sent_msg, received_msg, msg_cat, time_stamp)
+				}
 			}
 		})
 	})
