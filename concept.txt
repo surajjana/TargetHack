@@ -12,7 +12,8 @@ Sollution :
 A messenger based chat bot
 
 1. Search and buy stuffs using an image search
-2. Just converse with the assistant and details on discounts, nearby places (audio or text)
+2. Get product suggestions based on your image
+3. Just converse with the assistant and details on discounts, nearby places (audio or text)
 
 
 Judging Criteria

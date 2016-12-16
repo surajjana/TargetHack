@@ -102,7 +102,7 @@ function eventHandle(sender, event){
 			}else if (event.message && event.message.text) {
 				var text = event.message.text
 
-				if(text.toLowerCase() == 'suggest me some t-shirts'){
+				if(text.toLowerCase() == 'suggest me some hoodies'){
 					var msgData = {
 					  "attachment": {
 					    "type": "template",
@@ -112,14 +112,14 @@ function eventHandle(sender, event){
 					        {
 					          "buttons": [
 					            {
-					              "url": "http://careersensy.com",
-					              "type": "web_url",
+					              "payload": "JACK",
+					              "type": "postback",
 					              "title": "Get Details"
 					            }
 					          ],
-					          "image_url": "https://peterssendreceiveapp.ngrok.io/img/gray-t-shirt.png",
-					          "subtitle": "Job Mini Description",
-					          "title": "Job Title"
+					          "image_url": "https://media1.popsugar-assets.com/files/thumbor/EoxEA5ROSQ_2zfNxHtnHdn2VQJg/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/06/16/720/n/1922564/d07988d3_edit_img_image_41677440_1466092624_B0648_BK5229_m/i/Leather-Jacket-Details.jpg",
+					          "subtitle": "Description Of the product",
+					          "title": "Hoodie 1"
 					        }
 					      ]
 					    }
